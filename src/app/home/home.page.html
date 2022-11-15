@@ -15,7 +15,7 @@
 
   <div>
     <ion-card routerLink="/recipe/1">
-      <img alt="Adobo" src="assets/img/adobo.jpg" />
+      <ion-img alt="Adobo" src="assets/img/adobo.jpg"></ion-img>
       <ion-card-header>
         <ion-card-title class="ion-text-uppercase">Adobo</ion-card-title>
         <ion-card-subtitle>Food</ion-card-subtitle>
@@ -26,7 +26,7 @@
       </ion-card-content>
     </ion-card>
     <ion-card routerLink="/recipe/2">
-      <img alt="Lumpia" src="assets/img/lumpia.jpg" />
+      <ion-img alt="Lumpia" src="assets/img/lumpia.jpg"></ion-img>
       <ion-card-header>
         <ion-card-title class="ion-text-uppercase">Lumpia</ion-card-title>
         <ion-card-subtitle>Food</ion-card-subtitle>
@@ -37,7 +37,7 @@
       </ion-card-content>
     </ion-card>
     <ion-card routerLink="/recipe/3">
-      <img alt="Tapsilog" src="assets/img/tapsilog.jpg" />
+      <ion-img alt="Tapsilog" src="assets/img/tapsilog.jpg"></ion-img>
       <ion-card-header>
         <ion-card-title class="ion-text-uppercase">Tapsilog</ion-card-title>
         <ion-card-subtitle>Food</ion-card-subtitle>
@@ -48,4 +48,21 @@
       </ion-card-content>
     </ion-card>
   </div>
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end" routerLink="/buttons">
+    <ion-fab-button>
+      <ion-icon name="chevron-up-circle"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button>
+        <ion-icon name="document"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon name="color-palette"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon name="globe"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
 </ion-content>

@@ -15,6 +15,14 @@ const routes: Routes = [
     path: 'recipe/:id',
     loadChildren: () => import('./recipe/recipe.module').then( m => m.RecipePageModule)
   },
+  {
+    path: 'buttons',
+    loadChildren: () => import('./buttons/buttons.module').then( m => m.ButtonsPageModule)
+  },
+  {
+    path: 'employees/:id',
+    loadChildren: () => import('./employees/employees.module').then( m => m.EmployeesPageModule)
+  },
 ];
 
 @NgModule({

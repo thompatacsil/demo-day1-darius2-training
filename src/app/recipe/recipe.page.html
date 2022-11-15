@@ -9,20 +9,46 @@
 
 <ion-content>
 
-  <ion-card>
-    <img alt="{{name}}" src="assets/img/{{name}}.jpg" />
+  <ion-card *ngIf="name!='Recipe not Found'; else notFound">
+    <ion-img alt="{{ name }}" src="assets/img/{{ name }}.jpg" ></ion-img>
     <ion-card-header>
-      <ion-card-title class="ion-text-uppercase">{{name}}</ion-card-title>
+      <ion-card-title class="ion-text-uppercase">{{ name }}</ion-card-title>
       <ion-card-subtitle>Food</ion-card-subtitle>
     </ion-card-header>
   
     <ion-card-content>
-      {{description}}
+      {{ description }}
 
       <br><br>
-      <strong>How to Cook <span class="ion-text-capitalize">{{name}}</span></strong> 
-      {{recipeList}}
+      <strong class="ion-text-uppercase">Ingredients</strong> 
+      <br>
+      <ul>
+        <li *ngFor="let ingredient of ingredients; let i = index">
+          {{ ingredient.description }}
+        </li>
+      </ul>
+      <br>
+      <strong class="ion-text-uppercase">Instructions</strong> 
+      <br>
+      <ol>
+        <li *ngFor="let instruction of instructions; let i = index">
+          {{ instruction.description }}
+        </li>
+      </ol>
+ 
     </ion-card-content>
   </ion-card>
+
+  <ng-template #notFound>
+    <div id="container" class="ion-text-center">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title class="ion-text-uppercase">{{ name }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </ng-template>
 
 </ion-content>
