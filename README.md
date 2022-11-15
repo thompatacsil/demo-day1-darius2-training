@@ -1,4 +1,4 @@
-#Mobile Development Using IONIC Framework
+# Mobile Development Using IONIC Framework
 
 ## Setting up a new project with IONIC
 ###### Requirements
