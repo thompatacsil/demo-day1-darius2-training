@@ -7,7 +7,6 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./employees.page.scss'],
 })
 export class EmployeesPage implements OnInit {
-  id : string;
   employees = [
     {
       "id": 1,
@@ -34,16 +33,11 @@ export class EmployeesPage implements OnInit {
       "website": "ramiro.info"
     }
   ];
-  employee : any;
 
   constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
-    this.id = this.activatedRoute.snapshot.paramMap.get("id");
     
-    if(this.employees.length >= parseInt(this.id)){
-      this.employee = this.employees.find(x => x.id === parseInt(this.id));
-    }
   }
 
 }

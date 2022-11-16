@@ -1,3 +1,19 @@
 <ion-app>
   <ion-router-outlet></ion-router-outlet>
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end" >
+    <ion-fab-button color="dark" size="small">
+      <ion-icon name="chevron-up-circle-outline"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button color="medium" routerLink="/employees">
+        <ion-icon name="people-circle-outline"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="medium" routerLink="/films">
+        <ion-icon name="play-circle-outline"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="medium" routerLink="/home">
+        <ion-icon name="pizza-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
 </ion-app>

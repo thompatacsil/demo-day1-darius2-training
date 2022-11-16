@@ -16,12 +16,24 @@ const routes: Routes = [
     loadChildren: () => import('./recipe/recipe.module').then( m => m.RecipePageModule)
   },
   {
-    path: 'buttons',
-    loadChildren: () => import('./buttons/buttons.module').then( m => m.ButtonsPageModule)
+    path: 'employees',
+    loadChildren: () => import('./employees/employees.module').then( m => m.EmployeesPageModule)
   },
   {
-    path: 'employees/:id',
-    loadChildren: () => import('./employees/employees.module').then( m => m.EmployeesPageModule)
+    path: 'profile/:id',
+    loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
+  },
+  {
+    path: 'films',
+    loadChildren: () => import('./films/films.module').then( m => m.FilmsPageModule)
+  },
+  {
+    path: 'film/:id',
+    loadChildren: () => import('./film/film.module').then( m => m.FilmPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
 ];
 

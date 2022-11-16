@@ -2,15 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-buttons',
-  templateUrl: './buttons.page.html',
-  styleUrls: ['./buttons.page.scss'],
+  selector: 'app-profile',
+  templateUrl: './profile.page.html',
+  styleUrls: ['./profile.page.scss'],
 })
-export class ButtonsPage implements OnInit {
-
-  buttonName = 'Click Me';
-  isTrue = true;
-
+export class ProfilePage implements OnInit {
+  id : string;
   employees = [
     {
       "id": 1,
@@ -37,18 +34,17 @@ export class ButtonsPage implements OnInit {
       "website": "ramiro.info"
     }
   ];
-  
+  employee : any;
+
   constructor(private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
-  }
+    this.id = this.activatedRoute.snapshot.paramMap.get('id');
 
-  click(){
-    if(this.isTrue){
-      this.isTrue = false;
-    } else {
-      this.isTrue = true;
+    if(this.employees.length >= parseInt(this.id)){
+      this.employee = this.employees.find(x => x.id === parseInt(this.id));
     }
 
   }
+
 }

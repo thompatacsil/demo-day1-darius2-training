@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#" routerLink="/employees"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="employee; else notFound">
+    <ion-card-header>
+      <ion-card-title class="ion-text-uppercase">{{ employee.name }}</ion-card-title>
+      <ion-card-subtitle>{{ employee.email }}</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-list> Username : {{ employee.username }} </ion-list>
+      <ion-list> Phone : {{ employee.phone }} </ion-list>
+      <ion-list> Website: {{ employee.website }} </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ng-template #notFound>
+    <div id="container" class="ion-text-center">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title class="ion-text-uppercase">EMPLOYEE NOT FOUND</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </ng-template>
+</ion-content>

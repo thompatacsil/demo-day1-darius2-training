@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#" routerLink="/films"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ film.title }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-img alt="{{ film.title }}" src="{{ film.image }}"></ion-img>
+      <ion-card-title class="ion-text-uppercase">{{ film.title }}</ion-card-title>
+      <ion-card-subtitle>
+        <ion-list>
+          {{ film.original_title }} - {{ film.original_title_romanised }} - {{ film.release_date }}
+        </ion-list>
+        <ion-list>
+          Rating - {{ film.rt_score }}/100
+        </ion-list>
+        <ion-list>
+          Director - {{ film.director }}
+        </ion-list> 
+        <ion-list>
+          Producer - {{ film.producer }}
+        </ion-list>
+        <ion-list></ion-list>
+      </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      {{ film.description }}
+    </ion-card-content>
+  </ion-card>
+</ion-content>
